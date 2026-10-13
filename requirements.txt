@@ -1,0 +1,12 @@
+# 动态分析依赖（静态审计 / doctor / 离线 analyze 不需要）。
+#
+# 关键约束：frida 的主版本必须与设备上的 frida-server / frida-gadget 完全一致，
+# 否则注入会直接失败。下面锁定在 17.x；换 frida-server 大版本时，同步改这里再
+# 重新安装，并用 `python tool.py doctor` 确认版本。
+frida>=17,<18
+frida-tools>=13,<14
+
+# 可选：离线函数模拟（tool.py emulate）。不装也不影响其它功能，
+# 只有 emulate / --trace 用到；按需安装：pip install unicorn capstone
+# unicorn>=2,<3
+# capstone>=5,<6
