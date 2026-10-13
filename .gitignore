@@ -1,0 +1,40 @@
+# 运行产物（动态/静态每次任务都会生成，不入库）
+/out/
+out/
+
+# 首次运行自动下载的第三方工具缓存（体积大，可按需重新拉取）
+/tools/ghidra/
+/tools/jdk21/
+/tools/ilspycmd/
+/tools/Il2CppDumper-*/
+/tools/il2cppinspector/
+/tools/frida-server/
+# repack 生成的调试签名库（不要入库）
+/tools/harness-debug.keystore
+# 保留描述下载来源的清单，便于复现环境
+!/tools/native-tools-source.json
+
+# 抓到的样本与敏感二进制
+*.apk
+*.apks
+*.xapk
+*.obb
+*.dll
+*.so
+*.bytes
+*.dat
+global-metadata.dat
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
